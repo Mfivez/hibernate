@@ -22,6 +22,11 @@ public class Employe {
     private String name;
     @Column(name = "employes_last_name")
     private String lastName;
-    @ManyToMany(mappedBy = "employeList")
+    @ManyToMany
+    @JoinTable(
+            name = "affectation_employees",
+            joinColumns = @JoinColumn(name = "id_employes"),
+            inverseJoinColumns = @JoinColumn(name = "id_paddock")
+    )
     private List<Paddock> paddockList;
 }

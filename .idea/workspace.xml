@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b004b7-af98-4fa4-8d86-3939d15a5e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Dinosaur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Employe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/EnumDiet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Paddock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Specie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/MultiplePaddock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/UniquePaddock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/WithId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/AbstractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/EnclosMultipleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/ICrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/PaddockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/SpeciesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpaPark/repository/UniquePaddockRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaPark/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaPark/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaPark/models/Paddock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Paddock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaPark/models/Specie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaPark/models/Specie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,6 +39,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ThomRul"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ThomRul/learningJPA.git",
+    "accountId": "2cb3808a-d11c-439f-ad2d-fbe38654fd1b"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2erO3D6LmZQmHS29toZFBE6Nqhr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,12 +67,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Tom/Documents/technofutur_java_cyberdev/repoFormateur/ExoDinoJPAHeritage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Tom/Documents/technofutur_java_cyberdev/JPApark/src/main/java/jpaPark/Main.java",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -65,7 +88,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpaPark.Main" />
-      <module name="JPApark" />
+      <module name="JPA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jpaPark.*" />
@@ -99,6 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712606612705</updated>
       <workItem from="1712606613809" duration="5431000" />
+      <workItem from="1712659031263" duration="6346000" />
     </task>
     <servers />
   </component>

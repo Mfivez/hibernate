@@ -13,19 +13,24 @@ import java.util.List;
 @Getter @Setter // générer les getter et setter
 @AllArgsConstructor // générer un constructeur avec tous les arguments
 @NoArgsConstructor //générer un constructeur par défaut
-public class Specie {
+public class Specie implements WithId <Long> {
     @Id //je spécifie que la variable est un id
     @Column(name = "species_id") // je lui donne un nom
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // je spéficie que l'id sera auto incrémenté
-    private long id;
+    private Long id;
     @Column(name = "species_name")
     private String name;
     @Enumerated(EnumType.STRING) // je viens lui passer l'annotion Enumerated pour spéficier que c'est une énum basée sur mon enumération EnumDiet
     private EnumDiet enumDiet;
     @OneToMany(mappedBy = "specie")
     private List<Dinosaur> dinosaurList;
-    @OneToOne (mappedBy = "specie")
-    private Paddock paddock;
+
+    @ManyToOne
+    @JoinColumn(name = "espece_enclos_m")
+    private MultiplePaddock multiplePaddock;
+
+    @OneToOne(mappedBy = "specie")
+    private UniquePaddock uniquePaddock;
 
 
 
