@@ -1,37 +1,31 @@
 package jpaPark;
 
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jpaPark.models.MultiplePaddock;
-import jpaPark.models.UniquePaddock;
-import jpaPark.repository.EnclosMultipleRepository;
-import jpaPark.repository.PaddockRepository;
-import jpaPark.repository.SpeciesRepository;
-import jpaPark.repository.UniquePaddockRepository;
+import jpaPark.models.Car;
+import jpaPark.models.User;
+import jpaPark.repository.CarRepository;
+import jpaPark.repository.UserRepository;
 
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpapark");
-//        emf.close();
+        UserRepository userRepo = new UserRepository();
+        CarRepository carRepo = new CarRepository();
 
-        PaddockRepository enclosRepo = new PaddockRepository(emf);
-        UniquePaddockRepository esr = new UniquePaddockRepository(emf);
-        EnclosMultipleRepository emr = new EnclosMultipleRepository(emf);
-        SpeciesRepository especeRepo = new SpeciesRepository(emf);
+        User user = new User(null, "Michel", null);
+        user = userRepo.insert(user);
+        System.out.println("Utilisateur ajouté : " + user);
 
-        List<UniquePaddock> enclosSimples = esr.findAll();
-        List<MultiplePaddock> enclosMultiples = emr.findAll();
+        Car car = new Car(null, "Toyota", user);
+        car = carRepo.insert(car);
+        System.out.println("Voiture ajoutée : " + car);
 
-        System.out.println("-- Enclos simple -- ");
-        enclosSimples.forEach(System.out::println);
+        List<User> users = userRepo.findAll();
+        System.out.println("Liste des utilisateurs : " + users);
 
-        System.out.println("-- Enclos multiple -- ");
-        enclosMultiples.forEach(System.out::println);
-
-        emf.close();
-
+        List<Car> cars = carRepo.findAll();
+        System.out.println("Liste des voitures : " + cars);
     }
 }
